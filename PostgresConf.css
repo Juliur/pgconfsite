@@ -1,6 +1,7 @@
 body {
   font-family: 'Muli', sans-serif;
   padding-right: 0 !important;
+  font-size: 1rem;
 }
 
 .uppercase {
@@ -12,24 +13,29 @@ body {
 }
 
 section {
-  padding-top: 30px;
-  padding-bottom: 30px;
+  padding-top: 40px;
+  padding-bottom: 40px;
 }
 
 h1 {
-  margin: 15px 0px;
+  margin: 0 0 15px;
+  font-size: 5rem;
 }
 
 h2 {
-  margin-top: 10px;
+  margin-top: 2rem;
+  margin-bottom: 3rem;
+  font-size: 4rem;
 }
 
 h3 {
-  margin: 10px 0px;
+  margin: 10px 0;
+  font-size: 3rem;
 }
 
 h4 {
   margin: 20px 0px;
+  font-size: 2rem;
 }
 
 p {
@@ -45,6 +51,10 @@ p {
   margin: 0;
   display: flex;
   flex-direction: row;
+}
+
+.h-100 {
+  height: 100%;
 }
 
 .border {
@@ -141,14 +151,23 @@ a:focus {
   background-color: #000a12 !important;
 }
 
+.navbar-nav .navbar-custom {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
 .navbar-nav li {
-  height: 50px;
-  line-height: 50px;
   font-weight: 700;
+  font-size: 1.5rem;
 }
 
 .navbar-nav a {
   color: white;
+}
+
+.navbar-nav .link-effect:after {
+  background: #ffffff;
 }
 
 .modal-dialog {
@@ -167,6 +186,7 @@ a:focus {
 .sign-in-form {
   width: 340px;
   padding: 20px;
+  line-height: 23px;
 }
 
 .sign-in-form a {
@@ -177,8 +197,10 @@ a:focus {
   line-height: 20px;
 }
 
-.central-blocks,
-.jumbotron,
+.central-blocks {
+  background: #000a12;
+}
+
 .digital-events,
 .news,
 .footer {
@@ -195,24 +217,73 @@ a:focus {
   height: 100vh;
 }
 
-.jumbotron {
+.central-blocks .jumbotron {
   margin-bottom: 0;
   padding: 30px 0;
+  background-color: transparent;
+  height: 20vh;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
 }
 
-.jumbotron h1 {
+.central-blocks .jumbotron h1 {
   color: white;
   font-size: 45px;
 }
 
-.poster-card {
-  background-color: white;
-  padding: 15px;
+.central-blocks .wrapper-main-cards {
+  height: 65vh;
+}
+
+.central-blocks .main-card {
+  padding: 4vh;
   background: -webkit-linear-gradient(linear-gradient(110deg, #001970 60%, #303f9f 60%));
   background: -o-linear-gradient(linear-gradient(110deg, #001970 60%, #303f9f 60%));
   background: -moz-linear-gradient(linear-gradient(110deg, #001970 60%, #303f9f 60%));
   background: linear-gradient(110deg, #001970 60%, #303f9f 60%);
   color: #ffffff;
+}
+
+.central-blocks .main-card h3 {
+  margin-top: 0px;
+}
+
+.central-blocks .poster {
+  margin: 0px 0px 20px;
+}
+
+.central-blocks .poster-small {
+  margin: 0 0 20px;
+}
+
+.central-blocks .conference {
+  width: 100%;
+  height: 100%;
+}
+
+.central-blocks .digital-event,
+.central-blocks .meetup {
+  width: 100%;
+  height: calc((100% - 30px)/2);
+}
+
+.central-blocks .digital-event {
+  margin-bottom: 30px;
+}
+
+.central-blocks .poster-button-wrapper {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.angle-down {
+  display: flex;
+  justify-content: center;
+  margin-top: 4vh;
+  color: white;
 }
 
 .register-btn {
@@ -278,40 +349,9 @@ a:focus {
   background-color: #ffffff;
 }
 
-.poster {
-  width: 240px;
-  height: 275px;
-  margin: 15px 0px 20px;
-}
-
-.poster-small {
-  margin: 10px 0 20px;
-}
-
-.conference {
-  width: 650px;
-  height: 400px;
-}
-
-.digital-event,
-.meetup {
-  width: 460px;
-  height: 185px;
-}
-
-.digital-event {
-  margin-bottom: 30px;
-}
-
-.angle-down {
-  display: flex;
-  justify-content: center;
-  margin-top: 1.5vh;
-  color: white;
-}
-
 .conferences h2 {
-  margin-bottom: 20px;
+  margin-bottom: 2rem;
+  margin-top: 0;
 }
 
 .conferences .conference-main {
@@ -331,8 +371,8 @@ a:focus {
 }
 
 .conferences .poster-conference {
-  width: 270px;
-  height: 315px;
+  width: 100%;
+  height: 100%;
 }
 
 .conferences .conference-info {
@@ -344,10 +384,6 @@ a:focus {
 .conferences .conference-footer {
   position: absolute;
   width: 100%;
-}
-
-.conferences p.info {
-  font-size: 18px;
 }
 
 .conferences .info i {
@@ -363,7 +399,7 @@ a:focus {
 }
 
 .main-event {
-  padding: 50px 0;
+  padding: 80px 0;
 }
 
 .future-events {
@@ -376,9 +412,14 @@ a:focus {
   color: #001970;
 }
 
+.future-events .future-events-wrapper {
+  display: flex;
+  flex-flow: row wrap;
+}
+
 .events {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   flex: 1 0 0%;
   position: relative;
   background-color: white;
@@ -392,38 +433,36 @@ a:focus {
   display: flex;
   flex-direction: column;
   flex-grow: 1;
-  padding-top: 110px;
-}
-
-.wrapper-img-upcoming {
-  width: 250px;
-  height: 160px;
-  position: absolute;
-  top: -10%;
-  left: 25%;
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.175);
-  background: white;
-}
-
-.img-future {
-  width: 245px;
-  height: 155px;
-  margin: 3px;
-}
-
-.wrapper-img-future {
-  position: absolute;
-  top: -7%;
-  left: 15%;
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.175);
-  border-radius: 5px;
-  background: white;
+  position: relative;
+  padding-top: 20vh;
 }
 
 .img-upcoming {
-  width: 245px;
-  height: 155px;
-  margin: 3px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.175);
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%);
+  --width: 70%;
+  width: var(--width);
+  height: calc(var(--width)*75%);
+  z-index: 5;
+}
+
+.img-future {
+  width: 100%;
+  height: 100%;
+  border-radius: 3px;
+}
+
+.wrapper-img-future {
+  width: 60%;
+  height: 30%;
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.175);
+  border-radius: 5px;
+  background: white;
 }
 
 .card-footer {
@@ -438,14 +477,19 @@ a:focus {
 
 .meetup-link {
   display: inline-block;
+  width: 100%;
 }
 
 .meetup-item {
-  width: 270px;
-  height: 170px;
+  width: 100%;
   padding: 15px;
   background-color: white;
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.175);
+}
+
+.meetup-item h3 {
+  color: #001970;
+  font-weight: 700;
 }
 
 .meetup-header {
@@ -477,12 +521,36 @@ a:focus {
 }
 
 .news a.link-effect:after {
-  top: 80%;
+  top: 90%;
   background: #ffffff;
+}
+
+.news .border-custom {
+  border-right: 1px solid #ffffff;
+}
+
+.news h4 {
+  margin-top: 0;
+}
+
+.news .rss-wrapper {
+  padding: 15px;
+}
+
+.news .rss-wrapper a.link-effect:hover {
+  color: #ffffff;
+}
+
+.news .rss-wrapper .rss-author {
+  font-size: 1.2rem;
 }
 
 .footer h2 {
   color: #ffffff;
+}
+
+.footer .copyright-wrapper {
+  text-align: center;
 }
 
 .subscribe-form {
@@ -491,7 +559,6 @@ a:focus {
   height: 40px;
   margin-bottom: 15px;
   padding: 6px 12px;
-  font-size: 14px;
   color: #555;
   background-color: #fff;
   border: 1px solid #ccc;
@@ -505,4 +572,37 @@ a:focus {
   margin-left: 10px;
   vertical-align: baseline;
   border: none;
+}
+
+@media (min-width: 1600px) {
+  h1 {
+    font-size: 6rem;
+  }
+  h2 {
+    font-size: 5rem;
+  }
+  h3 {
+    font-size: 4rem;
+  }
+  h4 {
+    font-size: 3rem;
+  }
+  p {
+    font-size: 2rem;
+  }
+  .navbar-custom li {
+    font-size: 1.8rem;
+  }
+  .jumbotron > h1 {
+    font-size: 8rem !important;
+  }
+  .learn-more {
+    font-size: 2rem;
+  }
+  .wrapper-img-upcoming {
+    height: 45%;
+  }
+  .wrapper-img-future {
+    height: 40%;
+  }
 }

@@ -15,26 +15,28 @@
 
 <body>
     <nav class="navbar navbar-fixed-top " role="navigation" id="nav-top">
-        <div class="container">
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-          <span class="sr-only">Toggle navigation</span>
-        </button>
-                <a class="navbar-brand" href="#"><img class="logo" src="images/logo-white.png"></a>
-            </div>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-lg-10 col-lg-offset-1">  
+                    <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    </button>
+                    <a class="navbar-brand" href="#"><img class="logo" src="images/logo-white.png"></a>
+                    </div>
 
-            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav navbar-custom">
-                    <li class="uppercase"><a href="#">Conferences</a></li>
-                    <li class="uppercase"><a href="#">Digital events</a></li>
-                    <li class="uppercase"><a href="#">Meetups</a></li>
-                    <li class="uppercase"><a href="#">Blog</a></li>
-                    <li class="uppercase"><a href="#">About</a></li>
-                    <li class="uppercase" data-toggle="modal" data-target="#newsletterModal"><a href="#">Newsletter</a>
+                    <li class="uppercase link-effect"><a href="#Conferences">Conferences</a></li>
+                    <li class="uppercase link-effect"><a href="#Digital Events">Digital events</a></li>
+                    <li class="uppercase link-effect"><a href="#Meetups">Meetups</a></li>
+                    <li class="uppercase link-effect"><a href="#Blog">Blog</a></li>
+                    <li class="uppercase link-effect"><a href="#">About</a></li>
+                    <li class="uppercase link-effect" data-toggle="modal" data-target="#newsletterModal"><a href="#">Newsletter</a>
                     </li>
 
-                    <!-- Modal -->
-                    <div class="modal fade" id="newsletterModal" tabindex="-1" role="dialog" aria-labelledby="newsletterModallLabel" aria-hidden="true">
+                    
+                  <div class="modal fade" id="newsletterModal" tabindex="-1" role="dialog" aria-labelledby="newsletterModallLabel" aria-hidden="true">
                         <div class="modal-dialog">
                             <div class="modal-content newsletter-modal">
                                 <div class="modal-header">
@@ -67,84 +69,104 @@
                                     <button type="button" class="btn register-btn-other uppercase bold">Log in</button>
                                 </div>
                                 <div class="clearfix">
-                                    <label class="pull-left checkbox-inline"><input type="checkbox"> Remember me</label>
-                                    <a href="#" class="pull-right">Need help?</a>
+                                    <label class="pull-left checkbox-inline"><input type="checkbox">Remember me</label>
+                                    <a href="#" class="pull-right" data-target="#navbar-devise-help" data-toggle="collapse" aria-expanded="true">Need help?</a>
+                                </div>
+                                <div class="collapse pass" id="navbar-devise-help" aria-expanded="true">
+                                    <a href="/accounts/password/new">Forgot your password?</a>
+                                    <br>
+                                    <a href="/accounts/confirmation/new">Didn't receive confirmation instructions?</a>
                                 </div>
                             </form>
                         </div>
-            </div>
+                
+                    </div>
+                </div>     
+            </div>    
         </div>
-    </nav>
+    </nav> 
 
     <section class="central-blocks">
         <div class="jumbotron">
             <h1 class="text-center uppercase bold">Postgres Conference</h1>
         </div>
 
-        <div class="container">
+        <div class="container-fluid">
             <div class="row">
-                <div class="col-lg-7 col-xs-12">
-                    <div class="poster-card conference">
-                        <div class="col-xs-7">
-                            <h1 class="bold">Silicon valley</h1>
-                            <h4>September 18 - 20, 2019</h4>
-                            <h4>San Jose United States</h4>
-                        </div>
-                        <div class="col-xs-5">
-                            <img class="img-responsive pull-right poster" alt="Conference poster" src="images/WorldsDatabaseSmallerSV.png">
+                <div class="col-lg-10 col-lg-offset-1">
+                    <div class="row wrapper-main-cards">
+                        <div class="col-lg-7 col-xs-12 h-100">
+                            <div class="main-card conference border">
+                                <div class="row h-100">
+                                    <div class="col-xs-7 h-100">
+                                    <h1 class="bold">Silicon valley</h1>
+                                    <h4>September 18 - 20, 2019</h4>
+                                    <h4>San Jose United States</h4>
+                                    </div>    
+                                    <div class="col-xs-5 h-100">
+                                    <div class="poster-button-wrapper h-100">
+                                        <img class="img-responsive pull-right poster" alt="Conference poster" src="images/WorldsDatabaseSmallerSV.png">
+                                        <div class= "card-footer">
+                                            <button type="button" class="btn register-btn bold uppercase">Register</button>
+                                        </div>    
+                                    </div>
+                                    </div>
+                                </div>    
+                            </div>
                         </div>
 
-                        <div class="col-xs-5 col-xs-offset-7">
-                            <button type="button" class="btn register-btn bold uppercase">Register</button>
-                        </div>
-
-                    </div>
-                </div>
-
-                <div class="col-lg-5 col-xs-12">
-                    <div class="poster-card digital-event">
-                        <div class="row">
+                        <div class="col-lg-5 col-xs-12 h-100">
+                        <div class="main-card digital-event border">
+                        <div class="row h-100">
                             <div class="col-xs-8">
                                 <h3 class="bold">Distributed SQL Webinar Series</h3>
                                 <p>September 11 - December 31, 2019</p>
                             </div>
-                            <div class="col-xs-4">
-                                <img class="img-responsive poster-small " src="images/04-conf-img.png">
-                            </div>
-                            <div class="col-xs-4 col-xs-offset-8">
-                                <button type="button" class="btn register-btn register-btn-small bold uppercase">Register</button>
+                            <div class="col-xs-4 h-100">
+                                <div class="poster-button-wrapper h-100">
+                                    <img class="img-responsive poster-small" src="images/04-conf-img.png">
+                                    <div class= "card-footer">
+                                        <button type="button" class="btn register-btn register-btn-small bold uppercase">Register</button>
+                                    </div>    
+                                </div>    
                             </div>
                         </div>
                     </div>
-                    <div class="poster-card meetup">
-                        <div class="row">
+                    
+                    <div class="main-card meetup border">
+                        <div class="row h-100">
                             <div class="col-xs-8">
                                 <h3 class="bold">Meetup title</h3>
-                                <p>Date</p>
-                                <p>Place</p>
+                                <p>September 11 - December 31, 2019</p>
                             </div>
-                            <div class="col-xs-4">
-                                <img class="img-responsive poster-small " src="images/empty-logo.png">
-                            </div>
-                            <div class="col-xs-4 col-xs-offset-8">
-                                <button class="btn register-btn register-btn-small bold uppercase">Register</button>
+                            <div class="col-xs-4 h-100">
+                                <div class="poster-button-wrapper h-100">
+                                    <img class="img-responsive poster-small" src="images/empty-logo.png">
+                                    <div class= "card-footer">
+                                        <button type="button" class="btn register-btn register-btn-small bold uppercase">Register</button>
+                                    </div>    
+                                </div>    
                             </div>
                         </div>
                     </div>
 
+                   
+                        </div>
+                    </div>    
+                </div>    
                 </div>
-            </div>
-            <div class="row">
-                <div class="angle-down"><i class="fa fa-angle-down fa-3x" aria-hidden="true"></i></div>
-            </div>
+            </div>    
+           
+            <div class="angle-down"><i class="fa fa-angle-down fa-3x" aria-hidden="true"></i></div>
+         
     </section>
 
     <!--Conferences-->
-    <section class="conferences">
-        <div class="container">
-            <h2 class="bold">Conferences</h2>
+    <section class="conferences" id="Conferences">
+        <div class="container-fluid">
             <div class="row">
-                <div class="col-lg-12">
+                <div class="col-lg-10 col-lg-offset-1">
+                    <h2 class="bold">Conferences</h2>
                     <div class="row row-custom conference-item">
                         <div class="col-lg-3 p-left-custom">
                             <img class="img-responsive pull-left poster-conference" alt="Conference poster" src="images/WorldsDatabaseSmallerSV.png">
@@ -234,16 +256,18 @@
         </div>
     </section>
     <!--Digital Events-->
-    <section class="digital-events">
-        <div class="container">
-            <h2 class="bold">Digital Events</h2>
+    <section class="digital-events" id="Digital Events">
+        <div class="container-fluid">
+            <div class="col-lg-10 col-lg-offset-1">
+                <h2 class="bold">Digital Events</h2>
+            </div>    
             <div class="row main-event">
-                <div class="col-lg-6 col-xs-12 col-lg-offset-3">
+                <div class="col-lg-4 col-xs-12 col-lg-offset-4">
                     <div class="card card-default events upcoming">
-                        <div class="wrapper-img-upcoming border">
-                            <img src="images/04-conf-img.png" class="img-responsive img-upcoming">
-                        </div>
                         <div class="card-body">
+                            <div class="wrapper-img-upcoming border">
+                                <img src="images/04-conf-img.png" class="img-responsive  img-upcoming border">
+                            </div>
                             <h3 class="bold">Distributed SQL Webinar Series</h3>
                             <p class="date-place">September 11 - December 31, 2019</p>
                             <p>The "Distributed SQL Webinar Series" is an ongoing schedule of online events hosted by YugaByte in partnership with PostgresConf. Each webinar will focus on a different aspect of what it takes to architect, scale, operate and
@@ -266,7 +290,9 @@
             </div>
 
             <div class="row future-events">
-                <div class="card card-default events ">
+                <div class="col-lg-10 col-lg-offset-1">
+                <div class="future-events-wrapper">
+                    <div class="card card-default events">
                     <div class="wrapper-img-future border">
                         <img src="images/EmptyLogoDE.png" class="img-responsive img-future ">
                     </div>
@@ -289,9 +315,9 @@
                             </div>
                         </div>
                     </div>
-                </div>
+                    </div>
 
-                <div class="card card-default events ">
+                    <div class="card card-default events">
                     <div class="wrapper-img-future border">
                         <img src="images/EmptyLogoDE.png" class="img-responsive img-future">
                     </div>
@@ -312,9 +338,9 @@
                             </div>
                         </div>
                     </div>
-                </div>
+                    </div>
 
-                <div class="card card-default events ">
+                    <div class="card card-default events">
                     <div class="wrapper-img-future border">
                         <img src="images/EmptyLogoDE.png" class="img-responsive img-future">
                     </div>
@@ -337,16 +363,20 @@
                             </div>
                         </div>
                     </div>
+                    </div>
                 </div>
+            </div>    
             </div>
         </div>
     </section>
 
     <!--Meetups-->
-    <section class="meetups">
-        <div class="container">
-            <h2 class="bold">Meetups</h2>
+    <section class="meetups" id="Meetups">
+        <div class="container-fluid">
             <div class="row">
+                <div class="col-lg-10 col-lg-offset-1">
+                <h2 class="bold">Meetups</h2>
+                <div class="row">
                 <div class="col-lg-3 col-xs-6">
                     <a href="#" class="meetup-link">
                         <div class="meetup-item">
@@ -391,39 +421,54 @@
                         </div>
                     </a>
                 </div>
-            </div>
+            
+            
+            
+                </div>
+            </div>    
+        </div>
         </div>
     </section>
     <!--News-->
-    <section class="news">
-        <div class="container">
-            <h2 class="bold">News</h2>
-            <div class="row">
-                <div class="col-lg-8 col-xs-12">
-                    <a href="#" class="link-effect">
-                        <h3>Pivotal Sponsor Highlight Blog for PostgresConf Silicon Valley 2019</h3>
-                    </a>
-                    <p>September 10, 2019</p>
-                    <p>As part of the countdown to PostgresConf Silicon Valley, learn more about featured Partner Sponsor Pivotal, including their commitment to partnering with and contributing to the Postgres community. Tell us about your commitment to
+    <section class="news" id="Blog">
+        <div class="container-fluid">
+            <div class="col-lg-10 col-lg-offset-1">
+                <h2 class="bold">News</h2>
+                <div class="row">
+                <div class="col-lg-8 col-xs-12 border-custom">
+                    <div class="new-item-wrapper">
+                        <a href="#" class="link-effect">
+                            <h3>Pivotal Sponsor Highlight Blog for PostgresConf Silicon Valley 2019</h3>
+                        </a>
+                        <p>September 10, 2019</p>
+                        <p>As part of the countdown to PostgresConf Silicon Valley, learn more about featured Partner Sponsor Pivotal, including their commitment to partnering with and contributing to the Postgres community. Tell us about your commitment to
                         the PostgreSQL Community. For those who haven’t heard of us, Greenplum is PostgreSQL massively scaled specifically...
-                    </p>
+                        </p>
+                    </div>    
                 </div>
 
                 <div class="col-lg-4 col-xs-12">
+                    <div class="rss-wrapper">
+                        <a href="#" class="rss-title link-effect"><h4>The Art of PostgreSQL: The Transcript, part II</h4></a>
+                        <p class="rss-author">Posted by Dimitri Fontaine on 2019-09-23 at 10:15</p>
+                    </div>
+                    <div class="rss-wrapper">
+                            <a href="#" class="rss-title link-effect"><h4>The Art of PostgreSQL: The Transcript, part I</h4></a>
+                            <p class="rss-author">Posted by Dimitri Fontaine on 2019-09-20 at 18:15</p>
+                    </div>
                 </div>
-            </div>
+                </div>
+            </div>    
         </div>
     </section>
     <!--Footer-->
     <footer class="footer">
-        <div class="container">
+        <div class="container-fluid">
             <div class="row">
-                <!-- <h2 class="bold">Newsletter</h2>
-                <div class="col-lg-5 col-xs-12 no-gutter">
-                   
-                </div> -->
                 <div class="col-lg-4 col-xs-12 col-lg-offset-4">
-                    <p class="text-muted">Copyright © 2019 Postgres Conference</p>
+                    <div class="copyright-wrapper">
+                        <p class="text-muted">Copyright © 2019 Postgres Conference</p>
+                    </div>
                 </div>
             </div>
         </div>
