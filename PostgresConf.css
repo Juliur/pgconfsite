@@ -126,7 +126,7 @@ a:focus {
 
 #nav-top {
   margin-bottom: 0;
-  background-color: #000a12;
+  background-color: #111e34;
   border: 0;
 }
 
@@ -148,7 +148,7 @@ a:focus {
 .nav .open > a,
 .nav .open > a:focus,
 .nav .open > a:hover {
-  background-color: #000a12 !important;
+  background-color: #111e34 !important;
 }
 
 .navbar-nav .navbar-custom {
@@ -172,6 +172,10 @@ a:focus {
 
 .modal-dialog {
   width: 400px;
+}
+
+.modal-dialog input {
+  font-size: 2rem;
 }
 
 .modal-backdrop {
@@ -198,13 +202,13 @@ a:focus {
 }
 
 .central-blocks {
-  background: #000a12;
+  background: #111e34;
 }
 
 .digital-events,
 .news,
 .footer {
-  background-color: #000a12;
+  background-color: #111e34;
 }
 
 .conferences,
@@ -213,7 +217,6 @@ a:focus {
 }
 
 .central-blocks {
-  color: #1b1d1d;
   height: 100vh;
 }
 
@@ -239,10 +242,10 @@ a:focus {
 
 .central-blocks .main-card {
   padding: 4vh;
-  background: -webkit-linear-gradient(linear-gradient(110deg, #001970 60%, #303f9f 60%));
-  background: -o-linear-gradient(linear-gradient(110deg, #001970 60%, #303f9f 60%));
-  background: -moz-linear-gradient(linear-gradient(110deg, #001970 60%, #303f9f 60%));
-  background: linear-gradient(110deg, #001970 60%, #303f9f 60%);
+  background: -webkit-linear-gradient(linear-gradient(110deg, #002297 60%, #3c4dbc 60%));
+  background: -o-linear-gradient(linear-gradient(110deg, #002297 60%, #3c4dbc 60%));
+  background: -moz-linear-gradient(linear-gradient(110deg, #002297 60%, #3c4dbc 60%));
+  background: linear-gradient(110deg, #002297 60%, #3c4dbc 60%);
   color: #ffffff;
 }
 
@@ -284,6 +287,26 @@ a:focus {
   justify-content: center;
   margin-top: 4vh;
   color: white;
+}
+
+.floating {
+  animation-name: floating;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+  margin-top: 3vh;
+}
+
+@keyframes floating {
+  from {
+    transform: translate(0, 0px);
+  }
+  65% {
+    transform: translate(0, 15px);
+  }
+  to {
+    transform: translate(0, 0px);
+  }
 }
 
 .register-btn {
@@ -434,35 +457,39 @@ a:focus {
   flex-direction: column;
   flex-grow: 1;
   position: relative;
-  padding-top: 20vh;
+}
+
+.card-body h3 {
+  margin-top: 4vh;
+}
+
+.wrapper-img-upcoming {
+  margin-top: -10vh;
 }
 
 .img-upcoming {
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.175);
-  position: absolute;
   left: 50%;
-  transform: translate(-50%);
   --width: 70%;
   width: var(--width);
   height: calc(var(--width)*75%);
   z-index: 5;
+  margin: 0 auto;
 }
 
 .img-future {
-  width: 100%;
-  height: 100%;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.175);
+  left: 50%;
+  --width: 70%;
+  width: var(--width);
+  height: calc(var(--width)*75%);
+  z-index: 5;
+  margin: 0 auto;
   border-radius: 3px;
 }
 
 .wrapper-img-future {
-  width: 60%;
-  height: 30%;
-  position: absolute;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.175);
-  border-radius: 5px;
-  background: white;
+  margin-top: -10vh;
 }
 
 .card-footer {
@@ -534,7 +561,7 @@ a:focus {
 }
 
 .news .rss-wrapper {
-  padding: 15px;
+  margin: 45px 0;
 }
 
 .news .rss-wrapper a.link-effect:hover {
