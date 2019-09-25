@@ -58,7 +58,7 @@ p {
 }
 
 .border {
-  border-radius: 3px;
+  border-radius: 5px;
 }
 
 .p-left-custom {
@@ -635,5 +635,48 @@ a:focus {
   }
   .wrapper-img-future {
     height: 40%;
+  }
+}
+
+@media (max-width: 768px) {
+  .central-blocks {
+    height: 100%;
+  }
+  .main-card {
+    padding: 20px !important;
+    height: auto !important;
+  }
+  .main-card h1 {
+    font-size: 4.5rem;
+  }
+  .wrapper-main-cards {
+    height: 100%  !important;
+  }
+  .digital-event,
+  .meetup {
+    height: auto !important;
+  }
+  .digital-event {
+    margin-top: 30px;
+  }
+  .row-custom {
+    flex-direction: column;
+  }
+  .p-left-custom {
+    padding-left: 15px;
+    padding-top: 15px;
+  }
+  .events {
+    padding: 20px;
+    margin: 0;
+  }
+  .img-upcoming, .img-future {
+    --width: 90%;
+  }
+  .card-default {
+    margin-top: 100px;
+  }
+  .card-default:first-child {
+    margin-top: 0;
   }
 }
