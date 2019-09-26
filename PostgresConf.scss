@@ -214,7 +214,9 @@ a:focus {
 .sign-in-form .clearfix {
     line-height: 20px;
 }
-
+.pass{
+    margin: 10px 0;
+}
 .central-blocks{
     background: $background-color;
 }
@@ -262,7 +264,7 @@ a:focus {
     }
     .poster {
         margin: 0px 0px 20px;
-        max-height: 49vh;
+        max-height: 49vh
     }
     
     .poster-small {
@@ -426,32 +428,33 @@ a:focus {
 }
 
 .main-event {
-    padding: 80px 0;
+    padding: 50px 0;
 }
 
 .future-events {
     display: flex;
     flex-flow: row wrap;
-    margin-top: 30px;
     h3 {
         color: $main_color;
     }
     .future-events-wrapper{
         display: flex;
         flex-flow: row wrap;
+        justify-content: center;
     }
 }
 
 .events {
     display: flex;
     flex-direction: row;
-    flex: 1 0 0%;
+    flex: 0 0 30%;
     position: relative;
     background-color: white;
     color: black;
     padding: 25px;
     border-radius: 5px;
     margin: 15px;
+    margin-top: 70px;
 }
 
 .card-body {
@@ -578,7 +581,7 @@ a:focus {
         padding-right: 20px;
     }
     .rss-wrapper{
-        margin: 45px 0;
+        margin: 45px 30px;
         &:first-of-type{
             margin-top: 20px;
         }
@@ -658,8 +661,12 @@ a:focus {
  }
 
  @media (max-width: 992px) {
+     .link-effect:after{
+         display: none;
+     }
     .navbar-fixed-top .navbar-collapse{
-        max-height: 680px;
+        // max-height: none;
+        overflow-y: scroll;
         .link-effect:after{
             display: none;
        }
@@ -673,21 +680,26 @@ a:focus {
         }
     }
     .sign-in-form{
-        height: auto;
-        max-height: 350px;
-        overflow-x: hidden;
-        overflow-y: visible;
+        // height: auto;
+        // max-height: 350px;
+        // overflow-x: hidden;
+        // overflow-y: visible;
     }
     .sign-in-form> form > h2,
     .sign-in-form> form > div.clearfix >label,
     .sign-in-form> form > div.clearfix > a{
             color: white;
     }
-    .pass a{
+    .pass{
+        a{
         color: white;
+        }
     }
     .central-blocks{
          height: 100%;
+    }
+    .jumbotron h1{
+        margin-top: 15px;
     }
     .main-card{
         padding: 20px !important;
@@ -714,6 +726,7 @@ a:focus {
         padding-top: 15px;
     }
     .events{
+        flex: 1 0 100%;
         padding: 20px;
         margin: 0;
     }
@@ -724,7 +737,7 @@ a:focus {
         margin-top: 100px;
     }
     .card-default:first-child{
-        margin-top: 0;
+        // margin-top: 0;
     }
     .meetup-link{
         margin-bottom: 15px;
