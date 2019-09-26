@@ -24,8 +24,8 @@ body {
 }
 
 section {
-    padding-top: 40px;
-    padding-bottom: 40px;
+    padding-top: 30px;
+    padding-bottom: 30px;
 }
 
 h1 {
@@ -231,6 +231,10 @@ a:focus {
 .meetups {
     background-color: $light-background;
 }
+.section-title{
+    margin-bottom: 3rem !important;
+    margin-top: 0px;
+}
 .central-blocks {
     height: 100vh;
 
@@ -377,8 +381,6 @@ a:focus {
 }
 
 
-
-
 .conferences {
     h2 {
         margin-bottom: 2rem;
@@ -411,9 +413,6 @@ a:focus {
         position: absolute;
         width: 100%;
     }
-    p.info {
-        // font-size: 18px;
-    }
     .info i {
         margin-right: 5px;
     }
@@ -425,10 +424,6 @@ a:focus {
 
 .upcoming h3 {
     color: $main_color;
-}
-
-.main-event {
-    padding: 50px 0;
 }
 
 .future-events {
@@ -664,11 +659,20 @@ a:focus {
      .link-effect:after{
          display: none;
      }
+     .navbar-collapse.in {
+        max-height: none;
+        height: auto;
+        overflow-y: visible;
+     }
     .navbar-fixed-top .navbar-collapse{
-        // max-height: none;
-        overflow-y: scroll;
         .link-effect:after{
             display: none;
+       }
+       .navbar-custom{
+        display: flex;
+        flex-direction: column;
+        flex-basis: 100%;
+        flex-grow: 1;
        }
     }
     .modal-dialog {
@@ -680,10 +684,7 @@ a:focus {
         }
     }
     .sign-in-form{
-        // height: auto;
-        // max-height: 350px;
-        // overflow-x: hidden;
-        // overflow-y: visible;
+        max-height: 370px;
     }
     .sign-in-form> form > h2,
     .sign-in-form> form > div.clearfix >label,
@@ -718,6 +719,9 @@ a:focus {
     .digital-event{
         margin-top: 30px;
     }
+    .future-events-wrapper{
+        margin-bottom: 30px;
+    }
     .row-custom{
         flex-direction: column;
     }
@@ -725,19 +729,42 @@ a:focus {
         padding-left: 15px;
         padding-top: 15px;
     }
+    .conferences, .digital-events, .meetups, .blog{
+        padding-top: 0;
+        padding-bottom: 0;
+    }
+    .conferences{
+        h2{
+            margin-top: 2rem;
+        }
+    }
     .events{
         flex: 1 0 100%;
         padding: 20px;
         margin: 0;
     }
+    .main-event{
+        padding: 0;
+    }
     .img-upcoming, .img-future{
         --width: 90%;
+    }
+    .digital-events{
+        h2{
+            margin-top: 30px;
+        }
     }
     .card-default{
         margin-top: 100px;
     }
-    .card-default:first-child{
-        // margin-top: 0;
+    .events{
+        margin-top: 90px;
+    }
+    .upcoming{
+        margin-top: 65px;
+    }
+    .meetups{
+        padding-top: 0;
     }
     .meetup-link{
         margin-bottom: 15px;
@@ -765,6 +792,12 @@ a:focus {
     }
     
    .blog{
+    h2{
+        margin-top: 3rem;
+    }
+    .blog-wrapper{
+        padding-right: 0;
+    }
     .border-custom{
         border-right: 0;
     }
