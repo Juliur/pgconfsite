@@ -76,6 +76,7 @@ a:focus {
 
 .date-place {
   color: #757575;
+  font-size: 2rem;
 }
 
 .learn-more {
@@ -215,6 +216,7 @@ a:focus {
 
 .central-blocks {
   background: #111e34;
+  padding-top: 53px;
 }
 
 .digital-events,
@@ -585,6 +587,10 @@ a:focus {
   font-weight: 700;
 }
 
+.comm-events {
+  margin-left: 30px;
+}
+
 .blog h2,
 .blog h3,
 .blog p,
@@ -691,14 +697,49 @@ a:focus {
   }
 }
 
-@media (max-width: 992px) {
+@media (max-width: 1200px) {
+  h1 {
+    font-size: 4rem !important;
+  }
+  h3 {
+    font-size: 2.5rem !important;
+  }
+}
+
+@media (max-width: 991px) {
   .link-effect:after {
     display: none;
   }
-  .navbar-collapse.in {
-    max-height: none;
-    height: auto;
-    overflow-y: visible;
+  .navbar-header {
+    float: none;
+  }
+  .navbar-toggle {
+    display: block;
+  }
+  .navbar-collapse {
+    border-top: 1px solid transparent;
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.1);
+  }
+  .navbar-fixed-top {
+    top: 0;
+    border-width: 0 0 1px;
+  }
+  .navbar-collapse.collapse {
+    display: none !important;
+  }
+  .navbar-nav {
+    float: none !important;
+    margin-top: 7.5px;
+  }
+  .navbar-nav > li {
+    float: none;
+  }
+  .navbar-nav > li > a {
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+  .collapse.in {
+    display: block !important;
   }
   .navbar-fixed-top .navbar-collapse .link-effect:after {
     display: none;
@@ -717,8 +758,13 @@ a:focus {
   .modal-dialog input {
     font-size: 1.5rem;
   }
+  .navbar-collapse {
+    max-height: 350px;
+    overflow-y: auto;
+  }
   .sign-in-form {
     max-height: 370px;
+    overflow-y: scroll;
   }
   .sign-in-form > form > h2,
   .sign-in-form > form > div.clearfix > label,
@@ -731,8 +777,14 @@ a:focus {
   .central-blocks {
     height: 100%;
   }
+  .central-blocks .poster {
+    max-height: none;
+  }
+  .section-title {
+    margin-bottom: 2rem !important;
+  }
   .jumbotron h1 {
-    margin-top: 15px;
+    margin-top: 1.5rem;
   }
   .main-card {
     padding: 20px !important;
@@ -748,11 +800,16 @@ a:focus {
   .meetup {
     height: auto !important;
   }
+  .digital-event p,
+  .meetup p {
+    margin-bottom: 2rem;
+  }
   .digital-event {
-    margin-top: 30px;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
   }
   .future-events-wrapper {
-    margin-bottom: 30px;
+    margin-bottom: 2rem;
   }
   .row-custom {
     flex-direction: column;
@@ -762,15 +819,19 @@ a:focus {
     padding-top: 15px;
   }
   .conferences, .digital-events, .meetups, .blog {
-    padding-top: 0;
-    padding-bottom: 0;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
   }
   .conferences h2 {
-    margin-top: 2rem;
+    margin-top: 0;
+    margin-bottom: 2rem;
+  }
+  .conferences .conference-item {
+    margin-bottom: 2rem;
   }
   .events {
     flex: 1 0 100%;
-    padding: 20px;
+    padding: 2rem;
     margin: 0;
   }
   .main-event {
@@ -780,22 +841,20 @@ a:focus {
     --width: 90%;
   }
   .digital-events h2 {
-    margin-top: 30px;
+    margin-top: 0;
+    margin-bottom: 2rem;
   }
   .card-default {
-    margin-top: 100px;
+    margin-top: 10rem;
   }
   .events {
-    margin-top: 90px;
+    margin-top: 8rem;
   }
   .upcoming {
-    margin-top: 65px;
-  }
-  .meetups {
-    padding-top: 0;
+    margin-top: 6rem;
   }
   .meetup-link {
-    margin-bottom: 15px;
+    margin-bottom: 1.5rem;
     color: black;
   }
   .meetup-link:hover {
@@ -807,8 +866,8 @@ a:focus {
   }
   .meetup-link .meetup-item {
     width: 100%;
-    padding: 15px;
-    margin-bottom: 15px;
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
     background-color: white;
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.175);
   }
@@ -816,16 +875,33 @@ a:focus {
     color: #001970;
     font-weight: 700;
   }
-  .blog h2 {
-    margin-top: 3rem;
-  }
   .blog .blog-wrapper {
     padding-right: 0;
+    margin-bottom: 2rem;
+  }
+  .blog .blog-wrapper h3:first-child {
+    margin-top: 0;
+  }
+  .blog .blog-wrapper .news-item-wrapper {
+    margin-bottom: 2rem;
   }
   .blog .border-custom {
     border-right: 0;
   }
   .blog .rss-wrapper {
-    margin: 30px 0;
+    margin: 3rem 0;
+  }
+  .blog .rss-wrapper:last-child {
+    margin-bottom: 0;
+  }
+  .blog .rss-wrapper h4 {
+    margin-bottom: 1.5rem;
+  }
+}
+
+@media screen and (orientation: landscape) {
+  .navbar-collapse.in {
+    max-height: 220px;
+    overflow-y: auto;
   }
 }
