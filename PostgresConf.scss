@@ -86,6 +86,7 @@ a:focus {
 .date-place {
     color: $secondary_font_color;
     font-size: 2rem;
+    margin-bottom: 0.5rem;
 }
 
 .learn-more {
@@ -239,7 +240,6 @@ a:focus {
 }
 .central-blocks {
     height: 100vh;
-
     .jumbotron {
         margin-bottom: 0;
         padding: 30px 0;
@@ -252,7 +252,7 @@ a:focus {
     }
     .jumbotron h1 {
         color: white;
-        font-size: 45px;
+        font-size: 5rem;
     }
     .wrapper-main-cards{
         height: 65vh;
@@ -403,8 +403,6 @@ a:focus {
     }
     .poster-conference {
         width: 100%;
-        height: 100%;
-        
     }
     .conference-info {
         display: flex;
@@ -656,15 +654,47 @@ a:focus {
     .wrapper-img-future{
         height: 40%;
     }
+    .poster-conference{
+        min-width: 320px;
+    }
  }
- @media (max-width: 1200px){
+ @media (max-width: 1300px) and (min-width: 992px){
+    .col-4-custom{
+         width: 30%;
+    }
+    .col-8-custom{
+        width: 70%
+    }
+    .poster-conference{
+        min-width: 270px
+    }
+ }  
+@media (max-width: 1100px) and (min-width: 992px){
+    .col-8-custom{       
+        margin-left: 30px;
+    }
+}
+ @media (max-width: 1300px){
     h1{
         font-size: 4rem !important;
     }
     h3{
         font-size: 2.5rem !important;
     }
+    h2{
+        font-size: 3rem;
+    }
+    p{
+        font-size: 1.5rem;
+    }
+    .date-place{
+        font-size: 1.5rem;
+        }
+    .btn{
+        font-size: 1rem;
+    }
  }
+
 
  @media (max-width: 991px) {
     .link-effect:after{
@@ -739,6 +769,9 @@ a:focus {
         a{
         color: white;
         }
+    }
+    .btn{
+        font-size: 1.3rem;
     }
     .central-blocks{
          height: 100%;
