@@ -257,7 +257,7 @@ a:focus {
 }
 
 .central-blocks .wrapper-main-cards {
-  height: 65vh;
+  height: 63vh;
 }
 
 .central-blocks .main-card {
@@ -306,7 +306,6 @@ a:focus {
 .angle-down {
   display: flex;
   justify-content: center;
-  margin-top: 4vh;
   color: white;
 }
 
@@ -315,7 +314,6 @@ a:focus {
   animation-duration: 3s;
   animation-iteration-count: infinite;
   animation-timing-function: ease-in-out;
-  margin-top: 3vh;
 }
 
 @keyframes floating {
@@ -689,6 +687,12 @@ a:focus {
   .learn-more {
     font-size: 2rem;
   }
+  .wrapper-main-cards {
+    height: 65vh;
+  }
+  .angle-down {
+    margin-top: 2.5vh;
+  }
   .wrapper-img-upcoming {
     height: 45%;
   }
@@ -697,6 +701,9 @@ a:focus {
   }
   .poster-conference {
     min-width: 320px;
+  }
+  .events {
+    margin-top: 80px;
   }
 }
 
