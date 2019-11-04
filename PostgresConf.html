@@ -9,7 +9,6 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="PostgresConf.css">
     <link href="https://fonts.googleapis.com/css?family=Muli:300,400,700&display=swap" rel="stylesheet">
-    <!-- <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700&display=swap" rel="stylesheet"> -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/fork-awesome@1.1.7/css/fork-awesome.min.css" integrity="sha256-gsmEoJAws/Kd3CjuOQzLie5Q3yshhvmo7YNtBG7aaEY=" crossorigin="anonymous">
 </head>
 
@@ -36,8 +35,8 @@
                     </li>
 
                     
-                  <div class="modal fade" id="newsletterModal" tabindex="-1" role="dialog" aria-labelledby="newsletterModallLabel" aria-hidden="true">
-                        <div class="modal-dialog">
+                  <div class="modal modal-custom fade" id="newsletterModal" tabindex="-1" role="dialog" aria-labelledby="newsletterModallLabel" aria-hidden="true">
+                        <div class="modal-dialog modal-dialog-custom">
                             <div class="modal-content newsletter-modal">
                                 <div class="modal-header">
                                     <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
@@ -265,12 +264,12 @@
     <!--Digital Events-->
     <section class="digital-events" id="Digital Events">
         <div class="container-fluid">
-            <div class="col-lg-10 col-lg-offset-1">
+            <div class="col-md-10 col-md-offset-1">
                 <h2 class="bold section-title">Digital Events</h2>
             </div>    
-            <div class="row main-event">
+            <div class="row">
                 <div class="col-lg-4 col-md-6 col-xs-12 col-lg-offset-4 col-md-offset-3">
-                    <div class="card events upcoming">
+                    <div class="card card-upcoming">
                         <div class="card-body">
                             <div class="wrapper-img-upcoming border">
                                 <img src="images/04-conf-img.png" class="img-responsive img-upcoming border">
@@ -299,7 +298,7 @@
             <div class="row future-events">
                 <div class="col-lg-10 col-md-10 col-lg-offset-1 col-md-offset-1">
                 <div class="future-events-wrapper">
-                    <div class="card events">
+                    <div class="card">
                     <div class="card-body">
                         <div class="wrapper-img-future border">
                             <img src="images/EmptyLogoDE.png" class="img-responsive img-future ">
@@ -316,7 +315,7 @@
                                         <a class="learn-more link-effect" href="#">Learn more</a>
                                     </div>
                                     <div class="col-xs-5 col-xs-offset-2 no-gutter">
-                                        <button type="button" class="btn register-btn-other uppercase bold">Register</button>
+                                        <button type="button" class="register-btn-other uppercase bold">Register</button>
                                     </div>
                                 </div>
                             </div>
@@ -324,7 +323,7 @@
                     </div>
                     </div>
 
-                    <div class="card events">
+                    <div class="card">
                     <div class="card-body">
                         <div class="wrapper-img-future border">
                             <img src="images/EmptyLogoDE.png" class="img-responsive img-future">
@@ -347,7 +346,7 @@
                     </div>
                     </div>
 
-                    <div class="card events">
+                    <div class="card">
                     <div class="card-body">
                         <div class="wrapper-img-future border">
                             <img src="images/EmptyLogoDE.png" class="img-responsive img-future">
@@ -383,8 +382,7 @@
             <div class="row">
                 <div class="col-md-10 col-md-offset-1">
                     <h2 class="bold section-title">Meetups</h2>
-                    <div class="row">
-                        <div id="carousel-example-generic" class="carousel slide meetup-carousel hidden-xs hidden-sm" data-ride="carousel">
+                        <div id="carousel-example-generic" class="carousel slide meetup-carousel hidden-xs hidden-sm visible-md visible-lg" data-ride="carousel">
                         <!-- Wrapper for slides -->
                         <div class="carousel-inner">
                             <div class="col-md-12 item active">
@@ -466,49 +464,82 @@
                         </a>
                         </div>
 
-                        <div class="visible-xs visible-sm">
-                            <div class="col-xs-12">
-                                <a href="#" class="meetup-link">
-                                    <div class="meetup-item">
-                                    <p class="date-place"><i class="fa fa-calendar icon-margin" aria-hidden="true"></i>Date</p>
-                                    <h3>Meetup title</h3>
-                                    <h4>Meetup subtitle</h4>
-                                    <p class="date-place"><i class="fa fa-map-marker icon-margin" aria-hidden="true"></i>Place</p>
-                                    </div>
-                                </a>
-                            </div>
-                            <div class="col-xs-12">
-                                <a href="#" class="meetup-link">
-                                    <div class="meetup-item">
-                                    <p class="date-place"><i class="fa fa-calendar icon-margin" aria-hidden="true"></i>Date</p>
-                                    <h3>Meetup title</h3>
-                                    <h4>Meetup subtitle</h4>
-                                    <p class="date-place"><i class="fa fa-map-marker icon-margin" aria-hidden="true"></i>Place</p>
-                                    </div>
-                                </a>
-                            </div>
-                            <div class="col-xs-12">
-                                <a href="#" class="meetup-link">
-                                    <div class="meetup-item">
-                                    <p class="date-place"><i class="fa fa-calendar icon-margin" aria-hidden="true"></i>Date</p>
-                                    <h3>Meetup title</h3>
-                                    <h4>Meetup subtitle</h4>
-                                    <p class="date-place"><i class="fa fa-map-marker icon-margin" aria-hidden="true"></i>Place</p>
-                                    </div>
-                                </a>
-                            </div>
-                            <div class="col-xs-12">
-                                <a href="#" class="meetup-link">
-                                    <div class="meetup-item">
-                                    <p class="date-place"><i class="fa fa-calendar icon-margin" aria-hidden="true"></i>Date</p>
-                                    <h3>Meetup title</h3>
-                                    <h4>Meetup subtitle</h4>
-                                    <p class="date-place"><i class="fa fa-map-marker icon-margin" aria-hidden="true"></i>Place</p>
-                                    </div>
-                                </a>
-                            </div>
+                        <div class="container-fluid visible-xs visible-sm hidden-md hidden-lg">
+                            <div class="row">
+                                <ul class="meetup-wrapper">
+                                <li class="meetup-link">
+                                    <a href="#">
+                                        <div class="meetup-item">
+                                            <p class="date-place"><i class="fa fa-calendar icon-margin" aria-hidden="true"></i>Date</p>
+                                            <h3>Meetup title</h3>
+                                            <h4>Meetup subtitle</h4>
+                                            <p class="date-place"><i class="fa fa-map-marker icon-margin" aria-hidden="true"></i>Place</p>
+                                        </div>
+                                    </a>
+                                </li> 
+                                 <li class="meetup-link">
+                                    <a href="#">
+                                        <div class="meetup-item">
+                                            <p class="date-place"><i class="fa fa-calendar icon-margin" aria-hidden="true"></i>Date</p>
+                                            <h3>Meetup title</h3>
+                                            <h4>Meetup subtitle</h4>
+                                            <p class="date-place"><i class="fa fa-map-marker icon-margin" aria-hidden="true"></i>Place</p>
+                                        </div>
+                                    </a>
+                                </li> 
+                                 <li class="meetup-link">
+                                    <a href="#">
+                                        <div class="meetup-item">
+                                            <p class="date-place"><i class="fa fa-calendar icon-margin" aria-hidden="true"></i>Date</p>
+                                            <h3>Meetup title</h3>
+                                            <h4>Meetup subtitle</h4>
+                                            <p class="date-place"><i class="fa fa-map-marker icon-margin" aria-hidden="true"></i>Place</p>
+                                        </div>
+                                    </a>
+                                </li> 
+                                 <li class="meetup-link">
+                                    <a href="#">
+                                        <div class="meetup-item">
+                                            <p class="date-place"><i class="fa fa-calendar icon-margin" aria-hidden="true"></i>Date</p>
+                                            <h3>Meetup title</h3>
+                                            <h4>Meetup subtitle</h4>
+                                            <p class="date-place"><i class="fa fa-map-marker icon-margin" aria-hidden="true"></i>Place</p>
+                                        </div>
+                                    </a>
+                                </li>    
+                            </ul>    
+                                <!-- <div class="col-sm-6 no-gutter">
+                                    <a href="#" class="meetup-link">
+                                        <div class="meetup-item">
+                                        <p class="date-place"><i class="fa fa-calendar icon-margin" aria-hidden="true"></i>Date</p>
+                                        <h3>Meetup title</h3>
+                                        <h4>Meetup subtitle</h4>
+                                        <p class="date-place"><i class="fa fa-map-marker icon-margin" aria-hidden="true"></i>Place</p>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="col-sm-6 no-gutter">
+                                    <a href="#" class="meetup-link">
+                                        <div class="meetup-item">
+                                        <p class="date-place"><i class="fa fa-calendar icon-margin" aria-hidden="true"></i>Date</p>
+                                        <h3>Meetup title</h3>
+                                        <h4>Meetup subtitle</h4>
+                                        <p class="date-place"><i class="fa fa-map-marker icon-margin" aria-hidden="true"></i>Place</p>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="col-sm-6 no-gutter">
+                                    <a href="#" class="meetup-link">
+                                        <div class="meetup-item">
+                                        <p class="date-place"><i class="fa fa-calendar icon-margin" aria-hidden="true"></i>Date</p>
+                                        <h3>Meetup title</h3>
+                                        <h4>Meetup subtitle</h4>
+                                        <p class="date-place"><i class="fa fa-map-marker icon-margin" aria-hidden="true"></i>Place</p>
+                                        </div>
+                                    </a>
+                                </div> -->
+                            </div>    
                         </div>
-                    </div>
                 </div>
             </div>    
         </div>
@@ -552,7 +583,7 @@
                 </div>
                 
                 <div class="col-md-4 col-xs-12 no-gutter">
-                        <h2 class="bold section-title comm-events">Community Events</h2>
+                        <h2 class="bold section-title community-title">Community Events</h2>
                     <div class="rss-wrapper">
                         <a href="#" class="rss-title link-effect"><h4>The Art of PostgreSQL: The Transcript, part II</h4></a>
                         <p class="rss-author">Posted by Dimitri Fontaine on 2019-09-23 at 10:15</p>
