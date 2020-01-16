@@ -466,19 +466,14 @@ a:focus {
 .digital-events .card {
   display: flex;
   flex-direction: row;
-  flex-basis: 31.5%;
-  width: 345px;
   position: relative;
   background-color: white;
   color: black;
   padding: 25px;
   border-radius: 5px;
-  margin-right: 30px;
+  margin-left: 15px;
+  margin-right: 15px;
   margin-top: 70px;
-}
-
-.digital-events .card:nth-child(3) {
-  margin-right: 0;
 }
 
 .digital-events .card .card-body {
@@ -498,7 +493,7 @@ a:focus {
 
 .digital-events .card-upcoming {
   width: 100%;
-  margin-right: 0;
+  margin: 0;
 }
 
 .digital-events .card-upcoming h3 {
@@ -526,14 +521,18 @@ a:focus {
 .digital-events .future-events .future-events-wrapper {
   display: flex;
   flex-flow: row wrap;
-  justify-content: center;
+  justify-content: space-between;
 }
 
-.digital-events .future-events .future-events-wrapper .wrapper-img-future {
+.digital-events .future-events .future-events-wrapper .card {
+  flex: 0 0 30%;
+}
+
+.digital-events .future-events .future-events-wrapper .card .wrapper-img-future {
   margin-top: -10vh;
 }
 
-.digital-events .future-events .future-events-wrapper .wrapper-img-future .img-future {
+.digital-events .future-events .future-events-wrapper .card .wrapper-img-future .img-future {
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.175);
   left: 50%;
   --width: 70%;
@@ -544,7 +543,7 @@ a:focus {
   border-radius: 3px;
 }
 
-.digital-events .button-group {
+.button-group {
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -888,30 +887,24 @@ a:focus {
   .conferences .conference-item {
     margin-bottom: 2rem;
   }
-  .card {
-    flex: 1 0 100%;
-    padding: 2rem;
-    margin: 0;
-  }
-  .main-event {
-    padding: 0;
-  }
-  .img-upcoming,
-  .img-future {
-    --width: 90%;
-  }
   .digital-events h2 {
     margin-top: 0;
     margin-bottom: 2rem;
   }
-  .card-default {
-    margin-top: 10rem;
+  .digital-events .card-upcoming {
+    margin-top: 6rem;
   }
-  .card {
+  .digital-events .future-events .future-events-wrapper {
+    justify-content: center;
+  }
+  .digital-events .future-events .future-events-wrapper .card {
+    flex: 0 0 45%;
+    padding: 2rem;
     margin-top: 8rem;
   }
-  .upcoming {
-    margin-top: 6rem;
+  .digital-events .future-events .future-events-wrapper .card .card-body .img-upcoming,
+  .digital-events .future-events .future-events-wrapper .card .card-body .img-future {
+    --width: 90%;
   }
   .meetup-wrapper {
     padding: 0;
@@ -919,33 +912,32 @@ a:focus {
     list-style: none;
     display: flex;
     flex-flow: row wrap;
-    justify-content: space-around;
+    justify-content: space-between;
   }
-  .meetup-link {
+  .meetup-wrapper .meetup-link {
     color: black;
-    width: 200px;
-    height: 180px;
-    margin-top: 10px;
+    flex: 1 0 25%;
+    margin: 15px;
   }
-  .meetup-link a {
+  .meetup-wrapper .meetup-link a {
     display: inline-block;
     width: 100%;
   }
-  .meetup-link:hover {
+  .meetup-wrapper .meetup-link:hover {
     transform: none;
     transition: none;
   }
-  .meetup-linkfocus .meetup-item {
+  .meetup-wrapper .meetup-linkfocus .meetup-item {
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.375);
   }
-  .meetup-link .meetup-item {
+  .meetup-wrapper .meetup-link .meetup-item {
     width: 100%;
     padding: 1.5rem;
     margin-bottom: 1.5rem;
     background-color: white;
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.175);
   }
-  .meetup-link .meetup-item h3 {
+  .meetup-wrapper .meetup-link .meetup-item h3 {
     color: #001970;
     font-weight: 700;
   }
@@ -974,11 +966,10 @@ a:focus {
 }
 
 @media (max-width: 575px) {
-  .digital-events .card {
-    margin-right: 0;
-    flex: 1 1 auto;
+  .digital-events .future-events .future-events-wrapper .card {
+    flex: 0 0 100%;
   }
-  .meetup-link {
+  .meetup-wrapper .meetup-link {
     flex: 1 1 auto;
   }
 }
