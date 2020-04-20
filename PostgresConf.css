@@ -125,6 +125,11 @@ a:focus {
   transform: translateY(-10px);
 }
 
+:target {
+  padding-top: 53px;
+  margin-top: -53px;
+}
+
 #nav-top {
   margin-bottom: 0;
   background-color: #111e34;
